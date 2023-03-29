@@ -1,6 +1,0 @@
-[submodule "intra-uuid-8109c7db-2074-4da4-a053-6e1dbf37b49a-4705482-daboyer"]
-	path = intra-uuid-8109c7db-2074-4da4-a053-6e1dbf37b49a-4705482-daboyer
-	url = git@vogsphere.42perpignan.fr:vogsphere/intra-uuid-8109c7db-2074-4da4-a053-6e1dbf37b49a-4705482-daboyer
-[submodule "printf"]
-	path = printf
-	url = git@vogsphere.42perpignan.fr:vogsphere/intra-uuid-8109c7db-2074-4da4-a053-6e1dbf37b49a-4705482-daboyer
