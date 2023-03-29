@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daboyer <daboyer@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 11:24:38 by daboyer           #+#    #+#             */
-/*   Updated: 2023/03/29 12:29:58 by daboyer          ###   ########.fr       */
+/*   Created: 2022/12/03 22:36:15 by daboyer           #+#    #+#             */
+/*   Updated: 2022/12/06 21:18:59 by daboyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <signal.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include "libft/libft.h"
-
-void	print_message(int sig);
-void	send_message(int pid, char *message);
-#endif
+int	ft_isalpha(int character)
+{
+	if (character >= 65 && character <= 90)
+		return (1);
+	else if (character >= 97 && character <= 122)
+		return (1);
+	return (0);
+}

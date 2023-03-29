@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daboyer <daboyer@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: daboyer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 11:24:38 by daboyer           #+#    #+#             */
-/*   Updated: 2023/03/29 12:29:58 by daboyer          ###   ########.fr       */
+/*   Created: 2022/11/14 17:50:51 by daboyer           #+#    #+#             */
+/*   Updated: 2023/02/13 14:31:23 by daboyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <signal.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include "libft/libft.h"
+char	*ft_strdup(const char *s)
+{
+	char	*d;
+	int		i;
 
-void	print_message(int sig);
-void	send_message(int pid, char *message);
-#endif
+	i = ft_strlen(s);
+	d = malloc((i + 1) * sizeof(char));
+	i = -1;
+	if (d)
+	{
+		while (s[++i])
+			d[i] = s[i];
+		d[i] = 0;
+	}
+	return (d);
+}

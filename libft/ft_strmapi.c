@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daboyer <daboyer@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 11:24:38 by daboyer           #+#    #+#             */
-/*   Updated: 2023/03/29 12:29:58 by daboyer          ###   ########.fr       */
+/*   Created: 2023/02/17 21:55:27 by daboyer           #+#    #+#             */
+/*   Updated: 2023/02/17 21:55:39 by daboyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <signal.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include "libft/libft.h"
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	size_t	i;
+	char	*n;
 
-void	print_message(int sig);
-void	send_message(int pid, char *message);
-#endif
+	i = ft_strlen(s);
+	n = malloc((i + 1) * sizeof(char));
+	if (!n)
+		return (0);
+	i = -1;
+	while (s[++i])
+		n[i] = (*f)((unsigned int) i, s[i]);
+	n[i] = 0;
+	return (n);
+}

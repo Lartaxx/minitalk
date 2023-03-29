@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daboyer <daboyer@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: daboyer <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 11:24:38 by daboyer           #+#    #+#             */
-/*   Updated: 2023/03/29 12:29:58 by daboyer          ###   ########.fr       */
+/*   Created: 2023/02/17 16:59:48 by daboyer           #+#    #+#             */
+/*   Updated: 2023/02/17 17:00:44 by daboyer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <signal.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include "libft/libft.h"
-
-void	print_message(int sig);
-void	send_message(int pid, char *message);
-#endif
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
